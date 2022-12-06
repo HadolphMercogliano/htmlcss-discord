@@ -1,0 +1,192 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variables */
+:root {
+    --primary: red;
+}
+
+/* Generics */
+
+/* Utility */
+.container {
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Header */
+header {
+    background-color: aqua;
+    padding: 0 40px;
+}
+
+.header-container {
+    display: flex;
+    width: 80%;
+    height: 80px;
+    line-height: 40px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header-container>* {
+    background-color: goldenrod;
+    margin: 15px 0;
+    border: 2px dashed black;
+    flex-basis: 21%;
+}
+
+.header-container nav {
+    flex-grow: 2;
+    text-align: center;
+}
+
+.header-container nav a {
+    padding: 10px;
+}
+
+.login {
+    text-align: right;
+}
+
+/* Main */
+
+.main-container>:nth-child(even) {
+    background-color: white;
+}
+
+/* jumbotron */
+.jumbotron {
+    display: flex;
+    background-color: blue;
+    height: 400px;
+    padding: 40px;
+}
+
+.jumbotron>section {
+    background-color: palevioletred;
+    margin: 0 auto;
+    max-width: 60%;
+    flex-grow: 1;
+    border: 2px dashed black;
+}
+
+/* main-body */
+.main-body {
+    padding: 40px;
+    background-color: lightgrey;
+}
+
+.main-body>section {
+    width: 80%;
+    display: flex;
+    min-height: 400px;
+    margin: 0 auto;
+}
+
+.main-body>section>article {
+    border: 2px dashed black;
+    flex-grow: 1;
+    min-width: 300px;
+    background-color: pink;
+}
+
+.main-body>section>aside {
+    border: 2px dashed black;
+    flex-grow: 2;
+    min-width: 300px;
+    background-color: cornflowerblue;
+}
+
+/* main-footer */
+.main-footer {
+    padding: 40px;
+    background-color: lightgrey;
+}
+
+.main-footer>section {
+    width: 80%;
+    display: flex;
+    min-height: 600px;
+    margin: 0 auto;
+}
+
+.main-footer>section>article {
+    border: 2px dashed black;
+    flex-grow: 1;
+    background-color: forestgreen;
+}
+
+/* Footer */
+footer {
+    padding: 15px 40px 0px;
+    background-color: rgb(70, 70, 70);
+}
+
+/* footer-header */
+.footer-main {
+    padding-bottom: 20px;
+}
+
+.footer-main>section {
+    width: 80%;
+    display: flex;
+    min-height: 400px;
+    margin: 0 auto;
+    border: 2px dashed black;
+}
+
+.footer-main .small-col {
+    display: flex;
+    flex-grow: 2;
+    background-color: green;
+}
+
+.small-col>div {
+    width: 25%;
+    border: 2px dashed white;
+}
+
+.large {
+    flex-grow: 1;
+    background-color: palevioletred;
+    border-right: 2px dashed black;
+}
+
+/* footer-footer */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-height: 80px;
+    margin: 0 auto;
+}
+
+.footer-container>section {
+    margin-top: auto;
+    display: flex;
+    padding: 10px;
+    background-color: aqua;
+    justify-content: space-between;
+
+}
+
+.footer-container>section>* {
+    background-color: lightgrey;
+    border: 2px dashed black;
+    padding: 2px;
+}
+
+hr {
+    margin: 0 auto;
+    max-width: 60%;
+    color: grey;
+}
