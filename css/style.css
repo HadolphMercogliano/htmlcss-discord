@@ -29,12 +29,21 @@ body {
 }
 
 .btn {
-    padding: 10px 15px;
+    padding: 8px 12px;
     color: black;
     background-color: white;
     border-radius: 28px;
     margin: 10px;
-    /* font-weight: ; */
+}
+
+.btn2 {
+    background-color: #8ea1e1;
+    color: white;
+    padding: 13px 18px;
+    border-radius: 28px;
+    margin: 10px;
+    font-size: 15px;
+
 }
 
 /* Utility */
@@ -46,6 +55,19 @@ a {
     text-decoration: none;
     color: white;
     font-size: 12px;
+}
+
+p {
+    line-height: 25px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 25px;
 }
 
 /* Header */
@@ -85,10 +107,6 @@ header {
     text-align: right;
 }
 
-.login .btn {
-    font-size: 700;
-}
-
 /* Main */
 
 .main-container>:nth-child(even) {
@@ -124,7 +142,11 @@ h1 {
 
 .jumbotron>section>p {
     text-align: center;
-    line-height: 25px;
+}
+
+.btn-space :first-child {
+    background-color: white;
+    color: #000;
 }
 
 .btn-space :last-child {
@@ -135,7 +157,7 @@ h1 {
 /* main-body */
 .main-body {
     padding: 40px;
-    background-color: lightgrey;
+    margin: 100px 0;
 }
 
 .main-body>section {
@@ -143,26 +165,24 @@ h1 {
     display: flex;
     min-height: 400px;
     margin: 0 auto;
+    align-items: center;
+    gap: 50px;
 }
 
 .main-body>section>.main-col {
-    border: 2px dashed black;
-    flex-grow: 1;
+    width: calc(100% / 3);
     min-width: 300px;
-    background-color: pink;
 }
 
 .main-body>section>.side-col {
-    border: 2px dashed black;
-    flex-grow: 2;
+    width: calc(100% / 3 * 2);
     min-width: 300px;
-    background-color: cornflowerblue;
 }
 
-/* main-footer */
+/* main-footer sezione grande e verde */
 .main-footer {
     padding: 40px;
-    background-color: lightgrey;
+    margin: 200px 0px 80px;
 }
 
 .main-footer>section {
@@ -170,18 +190,26 @@ h1 {
     display: flex;
     min-height: 600px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .main-footer>section>.footer-main-col {
-    border: 2px dashed black;
     flex-grow: 1;
-    background-color: forestgreen;
+}
+
+.footer-main-col h3 {
+    margin-top: -20px;
+    margin-bottom: 60px;
+}
+
+.footer-main-col .btn2 {
+    margin: 40px;
 }
 
 /* Footer */
 footer {
     padding: 15px 40px 0px;
-    background-color: rgb(70, 70, 70);
+    background-color: #23272a;
 }
 
 /* footer-header */
