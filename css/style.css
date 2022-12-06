@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+ul {
+    list-style: none;
+}
+
 *,
 *::before,
 *::after {
@@ -84,7 +88,7 @@ header {
     margin: 0 auto;
 }
 
-.header-container .img {
+.img {
     display: flex;
 }
 
@@ -96,7 +100,12 @@ header {
 
 .header-container nav {
     flex-grow: 2;
-    text-align: center;
+}
+
+.header-container nav>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-container nav a {
@@ -147,9 +156,10 @@ h1 {
 .btn-space :first-child {
     background-color: white;
     color: #000;
+    font-weight: 600;
 }
 
-.btn-space :last-child {
+.btn-space> :last-child {
     background-color: #23272a;
     color: white;
 }
@@ -194,11 +204,13 @@ h1 {
 }
 
 .main-footer>section>.footer-main-col {
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-main-col h3 {
-    margin-top: -20px;
+    margin-top: -10px;
     margin-bottom: 60px;
 }
 
@@ -215,6 +227,7 @@ footer {
 /* footer-header */
 .footer-main {
     padding-bottom: 20px;
+    margin-top: 20px;
 }
 
 .footer-main>section {
@@ -222,24 +235,52 @@ footer {
     display: flex;
     min-height: 400px;
     margin: 0 auto;
-    border: 2px dashed black;
+    color: white;
+
 }
 
 .footer-main .small-col {
     display: flex;
-    flex-grow: 2;
-    background-color: green;
+    width: calc(100% / 3 * 2);
 }
 
 .small-col>div {
+    padding: 10px;
     width: 25%;
-    border: 2px dashed white;
 }
 
 .large {
-    flex-grow: 1;
-    background-color: palevioletred;
-    border-right: 2px dashed black;
+    width: calc(100% / 3);
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.footer-main h3 {
+    color: #6d84d0;
+
+}
+
+.large>i {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.large img {
+    margin: 10px 0;
+    width: 15%;
+    vertical-align: middle;
+}
+
+.large span {
+    font-size: 11px;
+}
+
+.small-col ul>li {
+    padding: 5px;
+}
+
+.small-col ul>li:first-child {
+    color: #6d84d0;
 }
 
 /* footer-footer */
@@ -254,20 +295,25 @@ footer {
 .footer-container>section {
     margin-top: auto;
     display: flex;
-    padding: 10px;
-    background-color: aqua;
+    padding: 10px 0;
     justify-content: space-between;
 
 }
 
-.footer-container>section>* {
-    background-color: lightgrey;
-    border: 2px dashed black;
+.footer-container>.img {
+    align-content: center;
+    margin: 10px 0;
+    flex-basis: 21%;
     padding: 2px;
+}
+
+.footer-container .btn {
+    color: white;
+    background-color: #8ea1e1;
 }
 
 hr {
     margin: 0 auto;
-    max-width: 60%;
+    max-width: 80%;
     color: grey;
 }
