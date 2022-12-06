@@ -5,12 +5,37 @@
     box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+svg,
+picture,
+video {
+    max-width: 100%;
+}
+
 /* variables */
 :root {
-    --primary: red;
+    --primary: ;
 }
 
 /* Generics */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+    padding: 10px 15px;
+    color: black;
+    background-color: white;
+    border-radius: 28px;
+    margin: 10px;
+    /* font-weight: ; */
+}
 
 /* Utility */
 .container {
@@ -19,12 +44,13 @@
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
+    font-size: 12px;
 }
 
 /* Header */
 header {
-    background-color: aqua;
+    background-color: #255ee9;
     padding: 0 40px;
 }
 
@@ -32,15 +58,17 @@ header {
     display: flex;
     width: 80%;
     height: 80px;
-    line-height: 40px;
     align-items: center;
     margin: 0 auto;
 }
 
+.header-container .img {
+    display: flex;
+}
+
 .header-container>* {
-    background-color: goldenrod;
+    align-content: center;
     margin: 15px 0;
-    border: 2px dashed black;
     flex-basis: 21%;
 }
 
@@ -57,6 +85,10 @@ header {
     text-align: right;
 }
 
+.login .btn {
+    font-size: 700;
+}
+
 /* Main */
 
 .main-container>:nth-child(even) {
@@ -66,17 +98,38 @@ header {
 /* jumbotron */
 .jumbotron {
     display: flex;
-    background-color: blue;
+    background-image: url(../img/jumbo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
     height: 400px;
     padding: 40px;
 }
 
 .jumbotron>section {
-    background-color: palevioletred;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
     margin: 0 auto;
-    max-width: 60%;
+    max-width: 50%;
     flex-grow: 1;
-    border: 2px dashed black;
+    color: white;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.jumbotron>section>p {
+    text-align: center;
+    line-height: 25px;
+}
+
+.btn-space :last-child {
+    background-color: #23272a;
+    color: white;
 }
 
 /* main-body */
@@ -92,14 +145,14 @@ header {
     margin: 0 auto;
 }
 
-.main-body>section>article {
+.main-body>section>.main-col {
     border: 2px dashed black;
     flex-grow: 1;
     min-width: 300px;
     background-color: pink;
 }
 
-.main-body>section>aside {
+.main-body>section>.side-col {
     border: 2px dashed black;
     flex-grow: 2;
     min-width: 300px;
@@ -119,7 +172,7 @@ header {
     margin: 0 auto;
 }
 
-.main-footer>section>article {
+.main-footer>section>.footer-main-col {
     border: 2px dashed black;
     flex-grow: 1;
     background-color: forestgreen;
