@@ -1,20 +1,28 @@
+/* utils */
+:root {
+    --blue: #255ee9;
+    --white: white;
+    --lightblue: #8ea1e1;
+    --lightgrey: #f1f1f1;
+}
+
 /* Generics */
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
 .btn {
-    padding: 8px 12px;
+    padding: var(--paddingm);
     color: black;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 28px;
     margin: 10px;
 }
 
 .btn2 {
     background-color: #8ea1e1;
-    color: white;
-    padding: 13px 18px;
+    color: var(--white);
+    padding: var(--paddingl);
     border-radius: 28px;
     margin: 10px;
     font-size: 15px;
@@ -28,7 +36,7 @@ body {
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--white);
     font-size: 12px;
 }
 
@@ -38,16 +46,20 @@ p {
 
 h2 {
     font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: var(--marginm);
 }
 
 h3 {
     font-size: 25px;
 }
 
+.transform {
+    transform: rotate(180deg);
+}
+
 /* Header */
 header {
-    background-color: #255ee9;
+    background-color: var(--blue);
     padding: 0 40px;
 }
 
@@ -56,6 +68,7 @@ header {
     width: 80%;
     height: 80px;
     align-items: center;
+    justify-content: space-between;
     margin: 0 auto;
 }
 
@@ -64,7 +77,6 @@ header {
 }
 
 .header-container>* {
-    align-content: center;
     margin: 15px 0;
     flex-basis: 21%;
 }
@@ -74,9 +86,12 @@ header {
 }
 
 .header-container nav>ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+}
+
+.header-container nav>ul>li {
+    display: inline-block;
+
 }
 
 .header-container nav a {
@@ -89,8 +104,9 @@ header {
 
 /* Main */
 
-.main-container>:nth-child(even) {
-    background-color: white;
+.main-body:nth-child(4),
+.main-footer {
+    background-color: var(--lightgrey);
 }
 
 /* jumbotron */
@@ -138,7 +154,12 @@ h1 {
 /* main-body */
 .main-body {
     padding: 40px;
-    margin: 100px 0;
+    /* margin: 100px 0; */
+}
+
+.wave-1hkxOo {
+    display: block;
+    color: var(--lightgrey);
 }
 
 .main-body>section {
@@ -148,6 +169,7 @@ h1 {
     margin: 0 auto;
     align-items: center;
     gap: 50px;
+    padding: 100px 0px;
 }
 
 .main-body>section>.main-col {
@@ -163,7 +185,7 @@ h1 {
 /* main-footer sezione grande e verde */
 .main-footer {
     padding: 40px;
-    margin: 200px 0px 80px;
+    /* margin: 200px 0px 0px; */
 }
 
 .main-footer>section {
@@ -182,7 +204,7 @@ h1 {
 
 .footer-main-col h3 {
     margin-top: -10px;
-    margin-bottom: 60px;
+
 }
 
 .footer-main-col .btn2 {

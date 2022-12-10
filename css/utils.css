@@ -24,5 +24,11 @@ video {
 
 /* variables */
 :root {
-    --primary: ;
+    --paddings: 2px 8px;
+    --paddingsm: 5px 10px;
+    --paddingm: 10px 15px;
+    --paddingl: 13px 18px;
+    --margins: 10px;
+    --marginm: 20px;
+    --marginl: 40px;
 }
